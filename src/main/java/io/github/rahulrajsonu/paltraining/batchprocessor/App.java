@@ -4,7 +4,7 @@ public class App {
 
   public static void main(String[] args) {
     BatchProcessor batchProcessor = new BatchProcessor();
-    batchProcessor.processBatch(args[0]);
+    batchProcessor.processBatch("inputfile");
     System.out.println("Done.");
   }
 }

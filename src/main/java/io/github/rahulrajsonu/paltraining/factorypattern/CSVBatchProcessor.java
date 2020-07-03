@@ -1,4 +1,4 @@
-package io.github.rahulrajsonu.paltraining.batchprocessor;
+package io.github.rahulrajsonu.paltraining.factorypattern;
 
 import java.io.File;
 

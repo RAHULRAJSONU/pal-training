@@ -23,7 +23,7 @@
         <artifactId>pal-training</artifactId>
         <version>1.0-SNAPSHOT</version>
         <configuration>
-          <mainClass>io.github.rahulrajsonu.paltraining.batchprocessor.App</mainClass>
+          <mainClass>io.github.rahulrajsonu.paltraining.factorypattern.App</mainClass>
         </configuration>
       </plugin>
       <plugin>
@@ -34,7 +34,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>io.github.rahulrajsonu.paltraining.batchprocessor.App</mainClass>
+              <mainClass>io.github.rahulrajsonu.paltraining.factorypattern.App</mainClass>
             </manifest>
           </archive>
         </configuration>

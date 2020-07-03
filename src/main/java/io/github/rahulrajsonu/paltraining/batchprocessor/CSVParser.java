@@ -4,17 +4,15 @@ import java.io.File;
 import java.util.Collections;
 import java.util.List;
 
-public class TextParser {
+public class CSVParser extends TextParser {
 
-  public TextParser() {
+  public CSVParser(File file) {
+    System.out.println("Creating CSV parser.");
   }
 
-  public TextParser(File file) {
-    System.out.println("Creating Text parser");
-  }
-
+  @Override
   public List<Record> parse() {
-    System.out.println("Parsing Text.");
+    System.out.println("Parsing CSV file.");
     return Collections.emptyList();
   }
 }

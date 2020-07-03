@@ -4,14 +4,20 @@ import java.io.File;
 import java.util.List;
 
 public class BatchProcessor {
-   public void processBatch(String fileName){
-     File file = openFile(fileName);
-     TextParser parser = new TextParser(file);
-     List<Record> records = parser.parse();
-     processRecords(records);
-     writeSummary();
-     closeFile(file);
-   }
+
+  public void processBatch(String fileName, String type) {
+    File file = openFile(fileName);
+    TextParser parser = null;
+    if (type.equals("text")) {
+      parser = new TextParser(file);
+    } else if (type.equals("csv")) {
+      parser = new CSVParser(file);
+    }
+    List<Record> records = parser.parse();
+    processRecords(records);
+    writeSummary();
+    closeFile(file);
+  }
 
   private File openFile(String fileName) {
     System.out.println("Opening File.");

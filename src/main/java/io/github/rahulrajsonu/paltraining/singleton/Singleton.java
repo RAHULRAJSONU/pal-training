@@ -1,6 +1,8 @@
 package io.github.rahulrajsonu.paltraining.singleton;
 
-public class Singleton {
+import java.io.Serializable;
+
+public class Singleton implements Serializable {
   private final static Singleton singleton = new Singleton();
 
   private Singleton(){

@@ -12,20 +12,15 @@ public class Singleton implements Serializable, Cloneable {
     System.out.println("Creating new instance..");
   }
   public static Singleton getInstance(){
-    if(null==singleton){
-      synchronized (Singleton.class){
-        if(null==singleton){
-          singleton = new Singleton();
-        }
-      }
-    }
-    return singleton;
+    return Holder.INSTANCE;
   }
-
-
 
   @Override
   protected Object clone() throws CloneNotSupportedException {
     throw new RuntimeException("Cloning not supported.");
+  }
+
+  static class Holder{
+    static final Singleton INSTANCE = new Singleton();
   }
 }

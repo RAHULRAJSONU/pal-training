@@ -1,0 +1,10 @@
+io\github\rahulrajsonu\paltraining\batchprocessor\Record.class
+io\github\rahulrajsonu\paltraining\batchprocessor\App.class
+io\github\rahulrajsonu\paltraining\batchprocessor\Parser.class
+io\github\rahulrajsonu\paltraining\batchprocessor\XMLBatchProcessor.class
+io\github\rahulrajsonu\paltraining\batchprocessor\BatchProcessor.class
+io\github\rahulrajsonu\paltraining\batchprocessor\TextBatchProcessor.class
+io\github\rahulrajsonu\paltraining\batchprocessor\TextParser.class
+io\github\rahulrajsonu\paltraining\batchprocessor\CSVBatchProcessor.class
+io\github\rahulrajsonu\paltraining\batchprocessor\CSVParser.class
+io\github\rahulrajsonu\paltraining\batchprocessor\XMLParser.class

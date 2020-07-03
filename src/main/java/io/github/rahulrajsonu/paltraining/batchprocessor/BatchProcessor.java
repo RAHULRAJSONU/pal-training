@@ -3,23 +3,19 @@ package io.github.rahulrajsonu.paltraining.batchprocessor;
 import java.io.File;
 import java.util.List;
 
-public class BatchProcessor {
+public abstract class BatchProcessor {
 
-  public void processBatch(String fileName, String type) {
+  public void processBatch(String fileName) {
     File file = openFile(fileName);
-    TextParser parser = null;
-    if (type.equals("text")) {
-      parser = new TextParser(file);
-    } else if (type.equals("csv")) {
-      parser = new CSVParser(file);
-    } else if (type.equals("xml")){
-      parser = new XMLParser(file);
-    }
+    Parser parser = createParser(file); // Factory Method
     List<Record> records = parser.parse();
     processRecords(records);
     writeSummary();
     closeFile(file);
   }
+
+  //Factory Method
+  public abstract Parser createParser(File file);
 
   private File openFile(String fileName) {
     System.out.println("Opening File.");

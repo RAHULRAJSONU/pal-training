@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.Collections;
 import java.util.List;
 
-public class CSVParser extends TextParser {
+public class CSVParser implements Parser {
 
   public CSVParser(File file) {
     System.out.println("Creating CSV parser.");

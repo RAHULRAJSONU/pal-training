@@ -7,7 +7,7 @@
   <groupId>io.github.rahulrajsonu</groupId>
   <artifactId>pal-training</artifactId>
   <version>1.0-SNAPSHOT</version>
-
+  <packaging>jar</packaging>
   <build>
     <plugins>
       <plugin>
@@ -18,9 +18,29 @@
           <target>8</target>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>io.github.rahulrajsonu</groupId>
+        <artifactId>pal-training</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <configuration>
+          <mainClass>io.github.rahulrajsonu.paltraining.batchprocessor.App</mainClass>
+        </configuration>
+      </plugin>
+      <plugin>
+        <!-- Build an executable JAR -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>io.github.rahulrajsonu.paltraining.batchprocessor.App</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.target>1.8</maven.compiler.target>

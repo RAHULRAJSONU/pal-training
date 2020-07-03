@@ -12,6 +12,8 @@ public class BatchProcessor {
       parser = new TextParser(file);
     } else if (type.equals("csv")) {
       parser = new CSVParser(file);
+    } else if (type.equals("xml")){
+      parser = new XMLParser(file);
     }
     List<Record> records = parser.parse();
     processRecords(records);

@@ -5,12 +5,13 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.lang.reflect.Constructor;
+import java.util.Arrays;
 
 public class Test {
 
   public static void main(String[] args) throws Exception{
     Singleton s1 = Singleton.getInstance();
-    Singleton s2 = breakSingletonUsingSerialization(s1);
+    Singleton s2 = breakSingletonUsingCloning(s1);
     System.out.println(String.format("Object : %s, Hashcode: %d","s1",s1.hashCode()));
     System.out.println(String.format("Object : %s, Hashcode: %d","s2",s2.hashCode()));
   }
@@ -29,5 +30,10 @@ public class Test {
     ObjectInputStream ois =
         new ObjectInputStream(new FileInputStream("singleton"));
     return (Singleton) ois.readObject();
+  }
+
+  static Singleton breakSingletonUsingCloning(Singleton singleton)
+      throws CloneNotSupportedException {
+    return (Singleton) singleton.clone();
   }
 }

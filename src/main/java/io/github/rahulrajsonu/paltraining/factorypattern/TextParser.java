@@ -7,7 +7,7 @@ import java.util.List;
 public class TextParser implements Parser{
 
   public TextParser(File file) {
-    System.out.println("Creating Text parser");
+    System.out.println("Creating Text parser.");
   }
 
   @Override
